@@ -165,8 +165,8 @@ function sortByKeys($sortKeys, &$array, &$firstElement, &$sortPath, $order = "AS
             }
 
             if ($sortKey !== $key && !is_array($value) && end($firstElement) === $value) {
-                // here we will get only when we the deepest array and it doesn't contain key that we need for sorting, 
-                // in this case we need to delete all we keys from $sortPath[$sortKey]
+                // here we will get only when we got to the deepest array and it doesn't contain key that we need for sorting, 
+                // in this case we need to delete all the keys from $sortPath[$sortKey]
                 $sortPath[$sortKey] = null;
             }
         }
